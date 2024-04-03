@@ -1,3 +1,8 @@
+# Source(s):
+# CNBC, Yahoo
+# 
+# Objective:
+# Webscrape the top headlines from each source. Perform a sentiment analysis on them. Aggregate the results and log into json.
 
 # Imports
 import nltk
@@ -56,7 +61,7 @@ for p in headline_body:
 
 print(CNBC_article_text)
 
-# Yahoo Finance ##
+# # Yahoo Finance ##
 
 # print("\n\nLet's look at Yahoo Finance. . .\n\n")
 # # Get URL
@@ -69,11 +74,11 @@ print(CNBC_article_text)
 
 # # Find the headline article
 # headline_link = soup.find(class_="js-content-viewer").find(class_="W(100%)")['alt']
-# print("The top article is " + headline_link + "\nLet's read this article. . . \n\n")
+# # print("The top article is " + headline_link + "\nLet's read this article. . . \n\n")
 
 # yahoo_article_text = headline_link
 
-# #Go to headline article
+# # Go to headline article
 # url = headline_link
 # response = requests.get(url)
 # html_content = response.text
