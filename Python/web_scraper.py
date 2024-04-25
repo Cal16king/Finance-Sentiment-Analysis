@@ -5,6 +5,7 @@
 # Webscrape the top headlines from each source. Perform a sentiment analysis on them. Aggregate the results and log into json.
 
 # Imports
+
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -30,14 +31,13 @@ nltk.download('vader_lexicon')
 url = 'https://www.cnbc.com/'
 response = requests.get(url)
 html_content = response.text
-
 # Set up BeutifulSoup
 soup = BeautifulSoup(html_content, 'html.parser')
 
 # Find the headline article
 headline_link = soup.find('h2', class_='FeaturedCard-packagedCardTitle').find('a')['href']
 # print("The top article is " + headline_link + "\nLet's read this article. . . \n\n")
-
+print(f'headline_link: {headline_link}')
 CNBC_article_text = headline_link
 
 # Go to headline article
@@ -104,7 +104,7 @@ print("Here are the two headlines: \n")
 headlines = ""
 headlines += CNBC_article_text + "\n"
 # headlines += yahoo_article_text
-print(headlines)
+print(f'headlines: {headlines}')
 
 # Tokenize the article
 tokens = word_tokenize(headlines)
@@ -121,7 +121,7 @@ lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
 
 sia = SentimentIntensityAnalyzer()
 sentiment_score = sia.polarity_scores(' '.join(lemmatized_tokens))
-
+print(f'sentiment_score: {sentiment_score}')
 positive = sentiment_score['pos'] * 100
 negative = sentiment_score['neg'] * 100
 
