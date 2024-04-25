@@ -1,0 +1,23 @@
+The project examines trends in the stock market during April 2024 by analyzing CNBC headline articles, focusing on the frequency of key terms like "inflation." It aims to answer the following questions:
+Trend Analysis
+Sentiment Analysis
+Event Correlation
+
+Big Picture Conclusions
+Based on preliminary findings, the frequency of the word "inflation" in CNBC headlines correlates with significant stock market movements. During periods of increased headline activity mentioning "inflation," the stock market exhibits higher volatility. This suggests that inflation-related news has a direct impact on investor sentiment and market behavior.
+
+What to Find on the Site
+Research Questions and Goals: An overview of the project's objectives, focusing on how particular words influences stock market trends.
+Data Visualizations: Graphs and charts depicting the occurrence of words in CNBC headlines, showing spikes in frequency and correlating them with market events. These visualizations illustrate the relationship between the news and market fluctuations.
+Project GitHub Repo: A link to the project's GitHub repository, containing the source code for the web scraping script and data analysis tools.
+Creative Commons License: Information on licensing, including the project's terms for sharing and using data.
+Acknowledgements: Recognition of contributors, permissions for sharing source texts, and other credits.
+
+Data Visualization:
+**GRAPH OF INFLATION OVER TIME VS STOCK PRICE OF MAJOR INDEX**
+
+GitHub Repo:
+**LINK TO REPO**
+
+Creative Commons License:
+**CREATIVE COMMONS LICENSE**
