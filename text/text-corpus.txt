@@ -1,0 +1,13 @@
+**Text Corpus Page**
+
+Source of the Text Corpus
+Our text corpus comprises headline articles from CNBC. We collect these articles hourly between 9 am and 4 pm on weekdays during April 2024. Unfortunately, I can't link directly to the source, as the collection is based on a custom web scraping script that retrieves headlines directly from CNBC's website.
+
+Why This Resource?
+CNBC is a widely recognized news outlet that focuses on financial and stock market news. This makes it an ideal resource for analyzing stock market trends. The hourly collection ensures that we capture real-time market news and can analyze how market trends evolve throughout the month. The timing also aligns with active stock market hours, which provides timely insights.
+
+Preparation and Alteration for Analysis
+Web Scraping: We use a custom Python script with Beautiful Soup to scrape headline articles from CNBC's website. The script runs on a DigitalOcean server via Crontab, ensuring consistent data collection.
+Data Cleaning: After scraping, we clean the data to remove irrelevant information, such as HTML tags, unnecessary whitespace, and non-textual elements.
+ext Processing: The cleaned text is processed further to extract keywords, trends, and sentiment analysis. This includes tokenization, stopword removal, and other preprocessing techniques.
+Data Aggregation: We aggregate the data to understand broader trends across the month and perform detailed analysis on individual headlines or clusters of headlines to assess specific stock market trends.
