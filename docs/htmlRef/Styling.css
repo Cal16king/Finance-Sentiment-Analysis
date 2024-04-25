@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  color:#873b77;
-  font-family: Georgia,serif;
+  color:#000000;
+  font-family: Roman,serif;
 }
 
 section{
@@ -28,16 +28,17 @@ ul {
     position: fixed;
     height: 100%;
     overflow: auto;
-    background-color: #786ED4;
+    background-color: #000000;
 }
 
 li a {
     font-family: Georgia;
     font-size: 24pt;
     display: block;
-    color: #c362ae;
-    padding: 8px 0 8px 16px;
+    color: #6ee189;
+    padding: 8px 0 8px 12px;
     text-decoration: none;
+    
 }
 
 li a:visited {
@@ -54,10 +55,9 @@ h1.header
     width:75%;
     text-align:center;
     position:relative;
-    color:#786ED4;
+    color:#001f60;
     float:left;
     font-size:36pt;
-    margin-top:auto;
 }
 
 .wrap {
@@ -88,26 +88,17 @@ h1.header
   padding:12px;
 }
 
-img.portrait
-{
-    padding-left: 230px;
-    margin-left: auto;
-    margin-right: auto;
-    width:850px;
-    height:1100px;
-    position:relative;
-}
-
 img.photo
 {
-    width:500px;
+    width: 650px;
     height:500px;
     position:relative;
 }
 #sidebar
 {
-    width: 200px;
+    width: 250px;
     float: left;
+    margin-right: auto;
     
 }
 .WP
