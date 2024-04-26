@@ -1,0 +1,14 @@
+Web Scraping
+
+A Python script was developed to scrape headline articles from CNBC every hour, from 9 a.m. to 4 p.m., on weekdays. These specific times were chosen to capture headlines approximately every hour while the stock market is open. The script utilized the Python library BeautifulSoup for web scraping, and a DigitalOcean server with crontab was employed to automate the process. The script generated a JSON file containing all the collected data. The data was collected from April 1 to April 18.
+
+
+
+Data Cleaning
+
+The data underwent manual cleaning to ensure quality. This process involved removing duplicate articles and adding corresponding dates to the records. Human sentiment was appended to each article to facilitate future analysis. Additionally, the JSON data was converted to XML, providing more format options for flexible analysis.
+
+
+
+Data Analysis
+
