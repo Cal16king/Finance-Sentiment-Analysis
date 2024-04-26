@@ -14,36 +14,45 @@
                     <li><a href="corpus.html">Corpus</a></li>
                     <li><a href="method.html">Method</a></li>
                     <li><a href="analysis.html">Analysis</a></li>
-                    <li><a href="discussion.html">Discussion</a></li>
+                    <li><a href="nextStep.html">Next Steps</a></li>
                 </ul>
             </div>
-        </div>
+        
             
             <div class="content">
+                <div class="headCont">                    
+                    <h1 class="header">Corpus</h1>
+                </div>
+                <figure>
+                    <a href="https://github.com/Cal16king/Finance-Sentiment-Analysis/blob/main/Python/results.json">
+                        <img class="git" src="images/cnbc_logo.jpg" alt="CNBC Logo"/>
+                    </a>
+                    <figcaption>Click the Logo to go to our Corpus!</figcaption>
+                </figure>
                 <section>
-                    <h1 class="header">Source of the Text Corpus</h1>
-                    <figure>
-                        <img class="photo" src="images/cnbc_logo.jpg" />
-                        <figcaption><dfn>CNBC Logo</dfn></figcaption>
-                    </figure>
-                </section>
-                <section>
+                    <div class="container">
                     <h2>Source of the Text Corpus</h2>
                     <p>Our text corpus comprises of headline articles from CNBC. We collect these articles hourly between 9 am and 4 pm on weekdays during April 2024. Unfortunately, I can't link directly to the source, as the collection is based on a custom web scraping script that retrieves headlines directly from CNBC's website.</p>
+                    </div>
                 </section>
                 <section>
+                    <div class="container">
                     <h2>Why This Resource?</h2>
                     <p>CNBC is a widely recognized news outlet that focuses on financial and stock market news. This makes it an ideal resource for analyzing stock market trends. The hourly collection ensures that we capture real-time market news and can analyze how market trends evolve throughout the month. The timing also aligns with active stock market hours, which provides timely insights.</p>
+                    </div>
                 </section>
                 <section>
+                    <div class="container">
                     <h2>Preparation and Alteration for Analysis:</h2>
                     <p>Web Scraping: We use a custom Python script with Beautiful Soup to scrape headline articles from CNBC's website. The script runs on a DigitalOcean server via Crontab, ensuring consistent data collection.</p>
                     <p>Data Cleaning: After scraping, we clean the data to remove irrelevant information, such as HTML tags, unnecessary whitespace, and non-textual elements.
                     </p>
-                    <p>ext Processing: The cleaned text is processed further to extract keywords, trends, and sentiment analysis. This includes tokenization, stopword removal, and other preprocessing techniques.
+                    <p>Text Processing: The cleaned text is processed further to extract keywords, trends, and sentiment analysis. This includes tokenization, stopword removal, and other preprocessing techniques.
                     </p>
                     <p>Data Aggregation: We aggregate the data to understand broader trends across the month and perform detailed analysis on individual headlines or clusters of headlines to assess specific stock market trends.</p>
+                    </div>
                 </section>
             </div>
+        </div>
     </body>
 </html>
