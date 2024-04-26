@@ -56,6 +56,62 @@
                     <p></p>
                     <p>Given a good start on where to look, we used Xquery for any other key words to get their word count. We also further catagorized them by seperating the word count for each article to see which ones had unique words used more often than others.</p>
                 </div>
+                <div class = "container">
+                    <h2>Xquery Code</h2>
+                    <pre>
+                        <code>
+                            declare variable $results := doc('results.xml');
+                            declare variable $wordsOfInterest := ('inflation', 'market', 'rate', 'march', 'prices', 'tesla');
+                            
+                            for $w in $wordsOfInterest
+                            let $matches := $results//key[@name ! string()[contains(., $w)]]
+                            let $count := count($matches)
+                            let $dates := $matches/date
+                            let $minDate := min($dates)
+                            let $maxDate := max($dates)
+                            
+                            for $m in $matches
+                            let $article := $m/@name ! string()
+                            let $tokens := tokenize($article, ' ')[. = $w]
+                            let $countPerArticle := $tokens => count()
+                            let $dates := $m/date ! xs:date(.)
+                            where $countPerArticle > 0
+                            order by $dates descending
+                            return ($w || ': ' || $dates || ': '|| $countPerArticle || '&amp;#10;')
+                        </code>
+                    </pre>
+                </div>
+                <div class="container">
+                    <h1>XSLT Code</h1>
+                    <pre>
+                        <code>
+                            &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+                            &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+                            exclude-result-prefixes="xs math"
+                            version="3.0"&gt;
+                            
+                            &lt;xsl:output method="text"/&gt;
+                            
+                            &lt;xsl:variable name="results" as="document-node()" select="doc('results.xml')"/&gt;
+                            
+                            &lt;xsl:template match="/"&gt;
+                            &lt;xsl:apply-templates select="//key"/&gt;
+                            &lt;/xsl:template&gt;
+                            
+                            &lt;xsl:template match="key"&gt;
+                            &lt;xsl:variable name="filename" as="xs:string" select="@name ! substring(., 1, 20) ! replace(., '\W', '') ! lower-case(.)"/&gt;
+                            &lt;xsl:value-of select="$filename"/&gt;
+                            &lt;xsl:result-document method="text" href="textCorpus/{date}-{$filename}.txt"&gt;
+                            &lt;xsl:value-of select="@name"/&gt;
+                            &lt;/xsl:result-document&gt;
+                            &lt;/xsl:template&gt;
+                            
+                            &lt;/xsl:stylesheet&gt;
+                        </code>
+                    </pre>
+                </div>
             </div>
         </div>
     </body>
