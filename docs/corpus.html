@@ -23,12 +23,14 @@
                 <div class="headCont">                    
                     <h1 class="header">Corpus</h1>
                 </div>
-                <figure>
-                    <a href="https://github.com/Cal16king/Finance-Sentiment-Analysis/blob/main/Python/results.json">
-                        <img class="git" src="images/cnbc_logo.jpg" alt="CNBC Logo"/>
-                    </a>
-                    <figcaption>Click the Logo to go to our Corpus!</figcaption>
-                </figure>
+                <div class="container">
+                    <figure>
+                        <a href="https://github.com/Cal16king/Finance-Sentiment-Analysis/blob/main/Python/results.json">
+                            <img class="git" src="images/cnbc_logo.jpg" alt="CNBC Logo"/>
+                        </a>
+                        <figcaption>Click the Logo to go to our Corpus!</figcaption>
+                    </figure>
+                </div>
                 <section>
                     <div class="container">
                     <h2>Source of the Text Corpus</h2>
@@ -43,13 +45,13 @@
                 </section>
                 <section>
                     <div class="container">
-                    <h2>Preparation and Alteration for Analysis:</h2>
-                    <p>Web Scraping: We use a custom Python script with Beautiful Soup to scrape headline articles from CNBC's website. The script runs on a DigitalOcean server via Crontab, ensuring consistent data collection.</p>
-                    <p>Data Cleaning: After scraping, we clean the data to remove irrelevant information, such as HTML tags, unnecessary whitespace, and non-textual elements.
-                    </p>
-                    <p>Text Processing: The cleaned text is processed further to extract keywords, trends, and sentiment analysis. This includes tokenization, stopword removal, and other preprocessing techniques.
-                    </p>
-                    <p>Data Aggregation: We aggregate the data to understand broader trends across the month and perform detailed analysis on individual headlines or clusters of headlines to assess specific stock market trends.</p>
+                        <h2>Preparation and Alteration for Analysis:</h2>
+                        <p><b>Web Scraping:</b> We use a custom Python script with Beautiful Soup to scrape headline articles from CNBC's website. The script runs on a DigitalOcean server via Crontab, ensuring consistent data collection.</p>
+                        <p><b>Data Cleaning:</b> After scraping, we clean the data to remove irrelevant information, such as HTML tags, unnecessary whitespace, and non-textual elements.
+                        </p>
+                        <p><b>Text Processing:</b> The cleaned text is processed further to extract keywords, trends, and sentiment analysis. This includes tokenization, stopword removal, and other preprocessing techniques.
+                        </p>
+                        <p><b>Data Aggregation:</b> We aggregate the data to understand broader trends across the month and perform detailed analysis on individual headlines or clusters of headlines to assess specific stock market trends.</p>
                     </div>
                 </section>
             </div>
