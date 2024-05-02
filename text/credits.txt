@@ -1,0 +1,20 @@
+We developed this project for the Large-Scale Text Analysis class at Penn State Behrend to explore potential correlations between news headlines and stock market trends.
+
+Caleb King | Digit Major
+
+Andrew Bond | Economics Major w/ Computer Science Minor
+
+Andrew Bond
+- Web Scraping/Data Mining
+- Data Cleaning
+- Server Hosting/Maintenance
+- Data Analysis
+
+Caleb King
+- Data Analysis 
+- Graphic Generation
+- Website Design 
+- Website Development
+
+
+
