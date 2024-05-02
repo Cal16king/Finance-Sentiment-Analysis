@@ -94,7 +94,8 @@
                             &lt;/xsl:template&gt;
                             
                             &lt;xsl:template match="key"&gt;
-                            &lt;xsl:variable name="filename" as="xs:string" select="@name ! substring(., 1, 20) ! replace(., '\W', '') ! lower-case(.)"/&gt;
+                            &lt;xsl:variable name="filename" as="xs:string" select="@name ! substring(., 1, 20)&gt;
+                            &lt;! replace(., '\W', '') ! lower-case(.)"/&gt;
                             &lt;xsl:value-of select="$filename"/&gt;
                             &lt;xsl:result-document method="text" href="textCorpus/{date}-{$filename}.txt"&gt;
                             &lt;xsl:value-of select="@name"/&gt;

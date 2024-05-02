@@ -81,25 +81,25 @@ h2
 {
   border: 1px solid #ccc;
   padding: 10px;
-  margin: 100px auto; /* Centering the container horizontally */
+  margin: 100px auto; 
   background-color: #FFFFFF;
-  max-width: 800px; /* Adjust this width as per your preference */
+  max-width: 800px; 
 }
 .head 
 {
   border: 1px solid #ccc;
   padding: 10px;
-  margin: 100px auto; /* Centering the container horizontally */
+  margin: 100px auto;
   background-color: #000000;
-  max-width: 700px; /* Adjust this width as per your preference */
+  max-width: 700px; 
 }
 .headCont 
 {
   border: 1px solid #ccc;
   padding: 10px;
-  margin: 100px auto; /* Centering the container horizontally */
+  margin: 100px auto;
   background-color: #000000;
-  max-width: 350px; /* Adjust this width as per your preference */
+  max-width: 350px; 
 }
 img 
 {
@@ -130,25 +130,25 @@ figcaption
   margin-top: 2%;
   margin-bottom: 5%;
   color: #3b73f3;
-  text-align: center; /* Centering the text */
-  padding: 8px; /* Add padding for the box */
+  text-align: center;
+  padding: 8px;
   border: 1px solid #ccc;
-  margin: 20px auto; /* Centering the container horizontally */
+  margin: 20px auto; 
   background-color: #FFFFFF;
-  max-width: 175px; /* Adjust this width as per your preference */
+  max-width: 175px; 
 }
-/* Define the code box */
+
 .code-box 
 {
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 5px;
   margin: 20px;
-  overflow-y: auto; /* Enable vertical scrollbar if needed */
-  max-height: 200px; /* Set maximum height */
+  overflow-y: scroll;
+  overflow-x: scroll;
+  max-height: 200px;
 }
 
-/* Preserve formatting within the code block */
 .code-box pre 
 {
   white-space: pre-wrap;
